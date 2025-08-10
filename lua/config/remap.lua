@@ -1,8 +1,24 @@
-vim.keymap.set("n", "<space>ww", "<cmd>w<CR>")
-vim.keymap.set("n", "<space>qq", "<cmd>q!<CR>")
+-- Save
+vim.keymap.set("n", "<leader>ww", "<cmd>w<CR>")
 
-vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
-vim.keymap.set("n", "<space>x", ":.lua<CR>")
-vim.keymap.set("v", "<space>x", ":lua<CR>")
+-- Quit
+vim.keymap.set("n", "<leader>qq", "<cmd>q!<CR>")
 
-vim.keymap.set("n", "<space>nt", "<cmd>Ex<CR>")
+-- Run
+vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
+vim.keymap.set("n", "<leader>x", ":.lua<CR>")
+vim.keymap.set("v", "<leader>x", ":lua<CR>")
+
+-- Ntree
+vim.keymap.set("n", "<leader>nt", "<cmd>Ex<CR>")
+vim.keymap.set("n", "<leader>nl", "<cmd>Vex<CR>")
+vim.keymap.set("n", "<leader>nr", "<cmd>Vex!<CR>")
+
+-- Copy to clipboard
+vim.keymap.set("v", "<leader>y", "\"+y")
+
+-- Window movement
+vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>")
+vim.keymap.set("n", "<C-j>", "<cmd>wincmd j<CR>")
+vim.keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>")
+vim.keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>")
