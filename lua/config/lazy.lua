@@ -17,16 +17,14 @@ end
 -- Add lazy into the runtime path
 vim.opt.rtp:prepend(lazypath)
 
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
+-- Remap Leader
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    -- import your plugins
+    -- import your plugins from $CONFIG_HOME/lua/plugins
     { import = "plugins" },
   },
 })
