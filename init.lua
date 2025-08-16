@@ -1,3 +1,4 @@
 require("config.lazy")
-require("config.remap")
 require("config.option")
+require("config.remap")
+require("config.terminal")
