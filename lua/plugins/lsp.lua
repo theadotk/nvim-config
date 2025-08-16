@@ -14,10 +14,12 @@ return {
             {
                 "mason-org/mason.nvim",
                 opts = {}
-            }
+            },
+            { "saghen/blink.cmp" }
         },
         config = function()
-            require("lspconfig").lua_ls.setup({})
+            vim.lsp.enable("lua_ls")
+            vim.lsp.config("lua_ls", {})
 
             vim.api.nvim_create_autocmd('LspAttach', {
                 callback = function(args)

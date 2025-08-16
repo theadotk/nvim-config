@@ -15,3 +15,4 @@ vim.opt.backup = false
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
 
+vim.opt.termguicolors = true
