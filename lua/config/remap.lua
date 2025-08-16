@@ -9,15 +9,14 @@ vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
 vim.keymap.set("n", "<leader>x", ":.lua<CR>")
 vim.keymap.set("v", "<leader>x", ":lua<CR>")
 
--- Ntree
-vim.keymap.set("n", "<leader>nt", "<cmd>Ex<CR>")
-vim.keymap.set("n", "<leader>nl", "<cmd>Vex<CR>")
-vim.keymap.set("n", "<leader>nr", "<cmd>Vex!<CR>")
+-- Split
+vim.keymap.set("n", "<leader>vs", ":new<CR>")
+vim.keymap.set("n", "<leader>hs", ":vnew<CR>")
 
 -- Copy to clipboard
 vim.keymap.set("v", "<leader>y", "\"+y")
 
--- Window movement
+-- Windows
 vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>")
 vim.keymap.set("n", "<C-j>", "<cmd>wincmd j<CR>")
 vim.keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>")
