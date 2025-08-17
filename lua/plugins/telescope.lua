@@ -4,6 +4,7 @@ return {
         tag = '0.1.8',
         dependencies = {
             'nvim-lua/plenary.nvim',
+            -- Note: For Windows, the fzf dll file will be built in build/Release folder. Move it to build to fix any issues
             { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
         },
         config = function()
