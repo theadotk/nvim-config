@@ -21,6 +21,15 @@ return {
             vim.lsp.enable("lua_ls")
             vim.lsp.config("lua_ls", {})
 
+            local function load_local_config()
+                local local_config = vim.fn.getcwd() .. "/.nvim/init.lua"
+                if vim.fn.filereadable(local_config) == 1 then
+                    dofile(local_config)
+                end
+            end
+
+            load_local_config()
+
             vim.api.nvim_create_autocmd('LspAttach', {
                 callback = function(args)
                     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
