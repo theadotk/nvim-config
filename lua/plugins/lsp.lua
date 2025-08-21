@@ -13,13 +13,16 @@ return {
             },
             {
                 "mason-org/mason.nvim",
-                opts = {}
+                opts = {
+                    ensure_installed = { "lua_ls", "pyrefly" }
+                }
             },
             { "saghen/blink.cmp" }
         },
         config = function()
-            vim.lsp.enable("lua_ls")
+            vim.lsp.enable({ "lua_ls", "pyrefly" })
             vim.lsp.config("lua_ls", {})
+            vim.lsp.config("pyrefly", {})
 
             local function load_local_config()
                 local local_config = vim.fn.getcwd() .. "/.nvim/init.lua"
@@ -46,6 +49,8 @@ return {
                     end
                 end,
             })
+
+            vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { buffer = 0 })
         end,
     }
 }
