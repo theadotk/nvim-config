@@ -11,7 +11,6 @@ return {
             completion = {
                 documentation = {
                     auto_show = false,
-                    border = "rounded",
                     window = {
                         border = "rounded",
                         winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:BlinkCmpDocCursorLine,Search:None",
