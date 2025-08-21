@@ -8,7 +8,27 @@ return {
             appearance = {
                 nerd_font_variant = 'mono'
             },
-            completion = { documentation = { auto_show = false } },
+            completion = {
+                documentation = {
+                    auto_show = false,
+                    border = "rounded",
+                    window = {
+                        border = "rounded",
+                        winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:BlinkCmpDocCursorLine,Search:None",
+                    },
+                },
+                menu = {
+                    min_width = 15,
+                    max_height = 10,
+                    border = "rounded",
+                    winblend = 0,
+                    winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:BlinkCmpMenuSelection,Search:None",
+                    draw = {
+                        padding = 0,
+                        gap = 2
+                    }
+                }
+            },
             sources = {
                 default = { 'lsp', 'path', 'snippets', 'buffer' },
             },

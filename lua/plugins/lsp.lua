@@ -14,7 +14,11 @@ return {
             {
                 "mason-org/mason.nvim",
                 opts = {
-                    ensure_installed = { "lua_ls", "pyrefly" }
+                    ui = {
+                        border = "rounded",
+                        width = 0.8,
+                        height = 0.8
+                    }
                 }
             },
             { "saghen/blink.cmp" }
