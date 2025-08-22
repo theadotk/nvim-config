@@ -24,9 +24,10 @@ return {
             { "saghen/blink.cmp" }
         },
         config = function()
-            vim.lsp.enable({ "lua_ls", "pyrefly" })
+            vim.lsp.enable({ "lua_ls", "pyrefly", "clangd" })
             vim.lsp.config("lua_ls", {})
             vim.lsp.config("pyrefly", {})
+            vim.lsp.config("clangd", {})
 
             local function load_local_config()
                 local local_config = vim.fn.getcwd() .. "/.nvim/init.lua"
