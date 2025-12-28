@@ -5,7 +5,8 @@ return {
         dependencies = {
             'nvim-lua/plenary.nvim',
             -- Note: For Windows, the fzf dll file will be built in build/Release folder. Move it to build to fix any issues
-            { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
+            -- { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
+            { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
         },
         config = function()
             local telescope = require('telescope')
